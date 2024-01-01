@@ -7,13 +7,13 @@ function Type() {
       <Typewriter
         options={{
           strings: [
-            // "Student",
-            // "Ethical Hacker",
-            "CyberSecurity Enthusiastic CyberSecurity Enthusiastic",
-            // "Event Organizer",
-            // "Blockchain Developer",
-            // "Software Developer",
-            // "Open Source Contributor",
+            "Student",
+            "Ethical Hacker",
+            "CyberSecurity Enthusiastic",
+            "Event Organizer",
+            "Blockchain Developer",
+            "Software Developer",
+            "Open Source Contributor",
           ],
           autoStart: true,
           loop: true,
