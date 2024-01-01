@@ -21,9 +21,9 @@ const navbar = () => {
             }}
           >
             {menuOpen ? (
-              <IoClose className="text-white md:hidden" size={50} />
+              <IoClose className="md:hidden text-white" size={50} />
             ) : (
-              <HiMenu className="text-white md:hidden" size={50} />
+              <HiMenu className="md:hidden text-white" size={50} />
             )}
           </button>
 
@@ -31,7 +31,7 @@ const navbar = () => {
             <div
               className={`${
                 menuOpen
-                  ? "block bg-gray-900 bg-transparent opacity-90 rounded-2xl"
+                  ? "block bg-gray-800 bg-transparent opacity-90 rounded-2xl"
                   : ""
               } w-full md:w-auto md:flex-row md:bg-transparent md:items-center md:ml-4 `}
               id="navbar-sticky"
@@ -41,7 +41,7 @@ const navbar = () => {
                   menuOpen ? "block" : "hidden"
                 }`}
               >
-                <li className="flex flex-row items-center justify-center gap-1 ">
+                <li className=" flex flex-row items-center justify-center gap-1">
                   <a
                     href="#"
                     class="group md:flex md:flex-row md:items-center md:gap-1 transition-all duration-300 ease-in-out flex flex-row gap-1 justify-center items-center py-2 px-3 rounded-lg md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-white"
@@ -67,7 +67,7 @@ const navbar = () => {
                     </span>
                   </a>
                 </li>
-                <li className="flex flex-row items-center justify-center gap-1 ">
+                <li className=" flex flex-row items-center justify-center gap-1">
                   <a
                     href="#"
                     class="group md:flex md:flex-row md:items-center md:gap-1 transition-all duration-300 ease-in-out flex flex-row gap-1 justify-center items-center py-2 px-3 rounded-lg md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-white"
@@ -156,7 +156,7 @@ const navbar = () => {
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="w-6 h-6 text-white transition-all ease-in-out hover:w-9 hover:h-9"
+                        className="hover:w-9 hover:h-9 w-6 h-6 text-white transition-all ease-in-out"
                       >
                         <path
                           d="M7 5C7 3.89543 7.89543 3 9 3C10.1046 3 11 3.89543 11 5C11 5.74028 10.5978 6.38663 10 6.73244V14.0396H11.7915C12.8961 14.0396 13.7915 13.1441 13.7915 12.0396V10.7838C13.1823 10.4411 12.7708 9.78837 12.7708 9.03955C12.7708 7.93498 13.6662 7.03955 14.7708 7.03955C15.8753 7.03955 16.7708 7.93498 16.7708 9.03955C16.7708 9.77123 16.3778 10.4111 15.7915 10.7598V12.0396C15.7915 14.2487 14.0006 16.0396 11.7915 16.0396H10V17.2676C10.5978 17.6134 11 18.2597 11 19C11 20.1046 10.1046 21 9 21C7.89543 21 7 20.1046 7 19C7 18.2597 7.4022 17.6134 8 17.2676V6.73244C7.4022 6.38663 7 5.74028 7 5Z"
