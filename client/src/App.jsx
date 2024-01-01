@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+import Navbar from "./components/navbar";
 
 const App = () => {
   const [init, setInit] = useState(false);
@@ -22,7 +23,7 @@ const App = () => {
       autoPlay: true,
       background: {
         color: {
-          value: "#A74AC7",
+          value: "#000000",
         },
         image: "",
         position: "",
@@ -54,8 +55,8 @@ const App = () => {
         detectsOn: "window",
         events: {
           onClick: {
-            enable: true,
-            mode: "push",
+            enable: false,
+            mode: [],
           },
           onDiv: {
             selectors: [],
@@ -64,11 +65,11 @@ const App = () => {
             type: "circle",
           },
           onHover: {
-            enable: true,
-            mode: "grab",
+            enable: false,
+            mode: [],
             parallax: {
-              enable: true,
-              force: 60,
+              enable: false,
+              force: 2,
               smooth: 10,
             },
           },
@@ -95,17 +96,9 @@ const App = () => {
             distance: 200,
           },
           bubble: {
-            distance: 400,
-            duration: 2,
+            distance: 200,
+            duration: 0.4,
             mix: false,
-            opacity: 0.8,
-            size: 40,
-            divs: {
-              distance: 200,
-              duration: 0.4,
-              mix: false,
-              selectors: [],
-            },
           },
           connect: {
             distance: 80,
@@ -115,7 +108,7 @@ const App = () => {
             radius: 60,
           },
           grab: {
-            distance: 400,
+            distance: 100,
             links: {
               blink: false,
               consent: false,
@@ -137,15 +130,6 @@ const App = () => {
             speed: 1,
             maxSpeed: 50,
             easing: "ease-out-quad",
-            divs: {
-              distance: 200,
-              duration: 0.4,
-              factor: 100,
-              speed: 1,
-              maxSpeed: 50,
-              easing: "ease-out-quad",
-              selectors: [],
-            },
           },
           slow: {
             factor: 3,
@@ -203,7 +187,7 @@ const App = () => {
           },
         },
         color: {
-          value: "#ffffff",
+          value: "#fff",
           animation: {
             h: {
               count: 0,
@@ -262,7 +246,7 @@ const App = () => {
           },
           decay: 0,
           distance: {},
-          direction: "none",
+          direction: "bottom",
           drift: 0,
           enable: true,
           gravity: {
@@ -293,7 +277,7 @@ const App = () => {
             acceleration: 0,
             enable: false,
           },
-          straight: false,
+          straight: true,
           trail: {
             enable: false,
             length: 10,
@@ -312,17 +296,14 @@ const App = () => {
             mode: "delete",
             value: 0,
           },
-          value: 100,
+          value: 400,
         },
         opacity: {
-          value: {
-            min: 0.1,
-            max: 0.5,
-          },
+          value: 1,
           animation: {
             count: 0,
-            enable: true,
-            speed: 3,
+            enable: false,
+            speed: 2,
             decay: 0,
             delay: 0,
             sync: false,
@@ -350,14 +331,11 @@ const App = () => {
           type: "circle",
         },
         size: {
-          value: {
-            min: 1,
-            max: 10,
-          },
+          value: 10,
           animation: {
             count: 0,
-            enable: true,
-            speed: 20,
+            enable: false,
+            speed: 5,
             decay: 0,
             delay: 0,
             sync: false,
@@ -370,10 +348,13 @@ const App = () => {
           width: 0,
         },
         zIndex: {
-          value: 0,
-          opacityRate: 1,
-          sizeRate: 1,
-          velocityRate: 1,
+          value: {
+            min: 0,
+            max: 100,
+          },
+          opacityRate: 10,
+          sizeRate: 10,
+          velocityRate: 10,
         },
         destroy: {
           bounds: {},
@@ -430,10 +411,10 @@ const App = () => {
           },
         },
         wobble: {
-          distance: 5,
-          enable: false,
+          distance: 10,
+          enable: true,
           speed: {
-            angle: 50,
+            angle: 10,
             move: 10,
           },
         },
@@ -478,13 +459,13 @@ const App = () => {
         links: {
           blink: false,
           color: {
-            value: "#ffffff",
+            value: "#fff",
           },
           consent: false,
-          distance: 150,
-          enable: true,
+          distance: 100,
+          enable: false,
           frequency: 1,
-          opacity: 0.4,
+          opacity: 1,
           shadow: {
             blur: 5,
             color: {
@@ -515,7 +496,7 @@ const App = () => {
       style: {},
       themes: [],
       zLayers: 100,
-      name: "Parallax",
+      name: "Snow",
       motion: {
         disable: false,
         reduce: {
@@ -530,7 +511,8 @@ const App = () => {
   return (
     <>
       <div>
-        <div className="absolute z-10">Hello</div>
+        <Navbar />
+
         {
           <Particles
             id="tsparticles"
