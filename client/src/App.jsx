@@ -1,13 +1,9 @@
-import Navbar from "./components/navbar";
-
-const App = () => {
+function App() {
   return (
     <>
-      <div className="h-screen w-screen">
-        <Navbar />
-      </div>
+      <div className="text-9xl">heyy</div>
     </>
   );
-};
+}
 
 export default App;
