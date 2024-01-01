@@ -514,15 +514,14 @@ const App = () => {
       <div>
         <Navbar />
         <Home1 />
-
-        {
-          <Particles
-            id="tsparticles"
-            particlesLoaded={particlesLoaded}
-            options={options}
-          />
-        }
       </div>
+      {
+        <Particles
+          id="tsparticles"
+          particlesLoaded={particlesLoaded}
+          options={options}
+        />
+      }
     </>
   );
 };
