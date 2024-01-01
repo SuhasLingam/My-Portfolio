@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import Navbar from "./components/navbar";
+import Home1 from "./components/Home/home1";
 
 const App = () => {
   const [init, setInit] = useState(false);
@@ -512,6 +513,7 @@ const App = () => {
     <>
       <div>
         <Navbar />
+        <Home1 />
 
         {
           <Particles
