@@ -30,9 +30,7 @@ const navbar = () => {
           {
             <div
               className={`${
-                menuOpen
-                  ? "block bg-gray-800 bg-transparent opacity-90 rounded-2xl"
-                  : ""
+                menuOpen ? "block bg-gray-800 opacity-[97%] rounded-2xl" : ""
               } w-full md:w-auto md:flex-row md:bg-transparent md:items-center md:ml-4 `}
               id="navbar-sticky"
             >
