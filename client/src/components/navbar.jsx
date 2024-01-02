@@ -7,7 +7,7 @@ const navbar = () => {
 
   return (
     <div>
-      <nav class="p-2 fixed w-full z-20 top-0 start-0 md:flex-row">
+      <nav class="p-2 border-2 sticky md:w-screen z-20 top-0 start-0 md:flex-row">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
             <span class="self-center font-extrabold text-6xl whitespace-nowrap text-blue-500">
