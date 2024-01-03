@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 
@@ -6,10 +6,14 @@ const navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div>
-      <nav class="p-2 border-2 sticky md:w-screen z-20 top-0 start-0 md:flex-row">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+    <div className="scroll-smooth">
+      <nav class="p-2 border-b-2 sticky  md:w-full z-20 top-0 start-0 md:flex-row">
+        {/** Fixed to come along */}
+        <div class=" flex flex-wrap items-center justify-between mx-auto p-2">
+          <a
+            href="/"
+            class="flex md:ml-[80px] items-center space-x-3 rtl:space-x-reverse"
+          >
             <span class="self-center font-extrabold text-6xl whitespace-nowrap text-blue-500">
               Sl.
             </span>
@@ -30,8 +34,10 @@ const navbar = () => {
           {
             <div
               className={`${
-                menuOpen ? "block bg-gray-800 opacity-[97%] rounded-2xl" : ""
-              } w-full md:w-auto md:flex-row md:bg-transparent md:items-center md:ml-4 `}
+                menuOpen
+                  ? "block bg-gray-800 opacity-[97%] w-full rounded-2xl"
+                  : ""
+              } w-full md:w-auto md:flex-row md:bg-transparent  md:items-center md:ml-4 md:mr-11 `}
               id="navbar-sticky"
             >
               <ul

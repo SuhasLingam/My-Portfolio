@@ -6,10 +6,13 @@ import React from "react";
 const App = () => {
   return (
     <>
-      <div className="container">
+      <div>
         <Navbar />
         <div>
           <ParticleBg />
+          <Home1 />
+          <Home1 />
+          <Home1 />
           <Home1 />
         </div>
       </div>

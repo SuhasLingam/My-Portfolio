@@ -3,13 +3,13 @@ import Typewriter from "typewriter-effect";
 
 function Type() {
   return (
-    <div>
+    <div className="md:m-0 m-auto">
       <Typewriter
         options={{
           strings: [
             "Student",
             "Ethical Hacker",
-            "CyberSecurity Enthusiastic",
+            "CyberSecurity Enthusiast",
             "Event Organizer",
             "Blockchain Developer",
             "Software Developer",
