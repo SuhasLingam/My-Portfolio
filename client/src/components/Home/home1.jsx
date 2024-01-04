@@ -3,8 +3,11 @@ import Type from "./type";
 
 const home1 = () => {
   return (
-    <div id="Main-Container" className=" md:flex sticky z-10 w-full m-auto">
-      <div className="text-white  justify-center flex w-full md:pl-11 pl-4 pt-[120px] flex-col font-anton text-4xl md:text-6xl">
+    <div
+      id="Main-Container"
+      className=" md:flex md:h-screen sticky z-10 w-full h-screen m-auto"
+    >
+      <div className="text-white md:p-0 justify-center flex w-full  md:pl-11 pl-4  pt-[120px] flex-col font-anton text-4xl md:text-6xl">
         {/** Name and TyperWriter */}
         <div className="md:space-y-4 md:m-0 m-auto space-y-2">
           <h1 className="flex">

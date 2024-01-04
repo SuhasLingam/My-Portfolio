@@ -4,10 +4,25 @@ import { IoClose } from "react-icons/io5";
 
 const navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scroll, setScroll] = useState(false);
+
+  const ChangeColorNav = () => {
+    if (window.scrollY >= 1) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
+
+  window.addEventListener("scroll", ChangeColorNav);
 
   return (
     <div className="scroll-smooth">
-      <nav class="p-2 border-b-2 sticky  md:w-full z-20 top-0 start-0 md:flex-row">
+      <nav
+        class={`p-1 ${
+          scroll ? "md:backdrop-blur-[10px] md:fixed md:scroll-smooth" : ""
+        }   md:w-full z-20 top-0 sticky start-0 md:flex-row`}
+      >
         {/** Fixed to come along */}
         <div class=" flex flex-wrap items-center justify-between mx-auto p-2">
           <a
@@ -35,13 +50,13 @@ const navbar = () => {
             <div
               className={`${
                 menuOpen
-                  ? "block bg-gray-800 opacity-[97%] w-full rounded-2xl"
+                  ? " bg-gray-800 block top-0 start-0 bg-transparent backdrop-blur-[10px] justify-center w-full h-max rounded-2xl"
                   : ""
-              } w-full md:w-auto md:flex-row md:bg-transparent  md:items-center md:ml-4 md:mr-11 `}
+              } w-full md:w-auto md:flex-row md:bg-transparent md:items-center md:ml-4 md:mr-11 `}
               id="navbar-sticky"
             >
               <ul
-                class={`md:flex md:justify-end md:gap-3  md:bg-transparent text-2xl p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ${
+                class={`md:flex md:justify-end md:gap-3 md:bg-transparent text-2xl p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ${
                   menuOpen ? "block" : "hidden"
                 }`}
               >
