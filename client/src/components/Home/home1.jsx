@@ -27,11 +27,10 @@ const home1 = () => {
         {/** Image  */}
         <iframe
           className="md:size-[450px] size-[270px] md:mr-[150px] sticky"
-          src="https://lottie.host/embed/0f0b95c2-c88d-41bc-a384-9eb5efd586e4/sX8ASpkm0i.json"
+          src="https://lottie.host/embed/9d120150-4267-487c-8a7d-427f8f43f2a3/1yl1chPLGV.json"
         ></iframe>
       </div>
     </div>
   );
 };
-
 export default home1;

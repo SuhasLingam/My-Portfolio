@@ -7,7 +7,7 @@ const navbar = () => {
   const [scroll, setScroll] = useState(false);
 
   const ChangeColorNav = () => {
-    if (window.scrollY >= 1) {
+    if (window.scrollY >= 0.1) {
       setScroll(true);
     } else {
       setScroll(false);
@@ -17,11 +17,15 @@ const navbar = () => {
   window.addEventListener("scroll", ChangeColorNav);
 
   return (
-    <div className="scroll-smooth">
+    <div>
       <nav
         class={`p-1 ${
-          scroll ? "md:backdrop-blur-[10px] md:fixed md:scroll-smooth" : ""
-        }   md:w-full z-20 top-0 sticky start-0 md:flex-row`}
+          scroll
+            ? "md:transition-all ease-in-out md:backdrop-blur-[10px] md:fixed md:scroll-smooth"
+            : ""
+        }   md:w-full z-20 top-0 sticky start-0 md:flex-row  ${
+          menuOpen ? "bg-gray-800 opacity-95 backdrop-blur-[10px]" : ""
+        } `}
       >
         {/** Fixed to come along */}
         <div class=" flex flex-wrap items-center justify-between mx-auto p-2">
@@ -50,7 +54,7 @@ const navbar = () => {
             <div
               className={`${
                 menuOpen
-                  ? " bg-gray-800 block top-0 start-0 bg-transparent backdrop-blur-[10px] justify-center w-full h-max rounded-2xl"
+                  ? "  block top-0 start-0 justify-center w-full h-max rounded-2xl"
                   : ""
               } w-full md:w-auto md:flex-row md:bg-transparent md:items-center md:ml-4 md:mr-11 `}
               id="navbar-sticky"

@@ -1,33 +1,43 @@
 import React from "react";
+import { Tilt } from "react-tilt";
 
 const home2 = () => {
   return (
-    <div>
-      <div className="font-anton md:h-screen md:mt-11 container sticky z-20 flex flex-col text-white bg-transparent">
-        <div>
-          <h1 className="md:ml-10 md:mt-[100px] flex flex-row items-center justify-start gap-3 text-6xl">
+    <div className="md:h-screen md:w-full md:flex-row flex flex-col">
+      <div className="font-anton md:gap-3 w-full md:text-wrap md:mt-[170px] md:m-auto md:justify-center justify-center container sticky z-20 flex  flex-col text-white bg-transparent">
+        <div className="md:mb-11 justify-center md:justify-center md:ml-10  m-auto  md:mt-[60px] flex md:flex-row gap-3 text-4xl md:text-6xl">
+          <h1>
             Let Me <span className=" text-blue-500">Introduce</span> Myself
           </h1>
         </div>
-        <div className="text-xl">
-          I am <span className="text-blue-500">Suhas Srinivas Lingam</span>,
-          currently pursuing my 3rd year in Computer Science Engineering at SRM
-          University.
+
+        <div className="md:ml-10 md:flex-wrap md:w-fit md:h-full md:text-2xl justify-center w-full p-[18%] md:p-0 space-y-6 text-lg">
+          <h1>Welcome to my Digital space!</h1>
+          <p>
+            I am fluent in languages like
+            <span className="text-blue-500">Python, C, C++, Javascript.</span> .
+          </p>
+          <p>
+            My field of interest's are building new
+            <span className="text-blue-500">Web Applications and Products</span>
+            and also in areas related to
+            <span className="text-blue-500">Blockchain and Cyber Security</span>
+            .
+          </p>
+          <p>
+            In my spare time, I apply my passion for developing products with
+            <span className="text-blue-500"> React.js</span> and Other
+            Technologies and Frameworks like
+            <span className="text-blue-500">Hardhat , Truffle</span>.
+          </p>
         </div>
-        <div className="text-xl text-justify">
-          <h1>Here Are my key attributes :</h1>
-          {/**Strong academic foundation CyberSecurity Head at CodeChefSrmRmp
-College club, managing a team of 30 members Intermediate level in
-cybersecurity, blockchain development, and penetration testing
-Proficient in Python, C, C++, Solidity, SQL, PHP, JavaScript, HTML,
-and CSS Demonstrated strong work ethic, leadership skills, and
-commitment to excellence Passionate about problem-solving and applying
-knowledge to realworld scenarios Active core member of various clubs
-and communities Combines technical expertise with sportsmanship
-Possesses a diverse skillset and unwavering dedication to success
-Believes in making a significant contribution to organizational growth
-and success. I */}
-        </div>
+      </div>
+
+      <div className="md:m-auto md:w-full md:h-full sticky z-30 flex items-center justify-center">
+        <iframe
+          className="md:size-[70%]  size-[400px] "
+          src="https://lottie.host/embed/b11d0d61-f0bb-485c-9650-821179063379/JJwqK5jptv.json"
+        ></iframe>
       </div>
     </div>
   );
