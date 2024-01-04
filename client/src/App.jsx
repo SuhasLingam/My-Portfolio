@@ -1,4 +1,4 @@
-import Home2 from "./components/Home/Home2";
+import Intro from "./components/Home/intro";
 import Home1 from "./components/Home/home1";
 import Navbar from "./components/navbar";
 import ParticleBg from "./components/particle-bg";
@@ -13,7 +13,7 @@ const App = () => {
         <Navbar />
         <div>
           <Home1 />
-          <Home2 />
+          <Intro />
         </div>
       </div>
     </>
