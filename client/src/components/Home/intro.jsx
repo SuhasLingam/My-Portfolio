@@ -1,7 +1,6 @@
 import React from "react";
-import { Tilt } from "react-tilt";
 
-const home2 = () => {
+const intro = () => {
   return (
     <div className="md:h-screen md:w-full md:flex-row flex flex-col">
       <div className="font-anton md:gap-3 w-full md:text-wrap md:mt-[170px] md:m-auto md:justify-center justify-center container sticky z-20 flex  flex-col text-white bg-transparent">
@@ -43,4 +42,4 @@ const home2 = () => {
   );
 };
 
-export default home2;
+export default intro;
