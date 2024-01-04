@@ -9,9 +9,9 @@ const App = () => {
   return (
     <>
       <div>
+        <ParticleBg />
         <Navbar />
         <div>
-          <ParticleBg />
           <Home1 />
           <Home2 />
         </div>
