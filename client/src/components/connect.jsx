@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaMedium } from "react-icons/fa";
+import React from "react";
+import { FaGithub, FaInstagram, FaMedium, FaLinkedin } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
-import { FaInstagram } from "react-icons/fa";
 
 const connect = () => {
   const IconsLinks = [
@@ -20,8 +17,9 @@ const connect = () => {
 
       <div className="md:flex md:flex-col md:items-center md:justify-center">
         <h1 className="md:text-6xl text-4xl">Find Me On</h1>
-        <p className="md:text-3xl md:mt-5 flex items-center justify-center p-3">
-          Feel free to Connect on
+        <p className="md:text-3xl md:mt-2 flex items-center justify-center p-3">
+          Feel free to{" "}
+          <span className="px-[10px] text-blue-500"> Connect </span> on
         </p>
       </div>
       {/**Links  */}

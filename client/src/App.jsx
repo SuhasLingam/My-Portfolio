@@ -4,6 +4,7 @@ import Navbar from "./components/navbar";
 import ParticleBg from "./components/particle-bg";
 import React from "react";
 import Connect from "./components/connect";
+import Footer from "./components/footer";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Home1 />
           <Intro />
           <Connect />
+          <Footer />
         </div>
       </div>
     </>
