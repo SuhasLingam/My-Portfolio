@@ -6,15 +6,17 @@ const navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scroll, setScroll] = useState(false);
 
-  const ChangeColorNav = () => {
-    if (window.scrollY >= 0.1) {
-      setScroll(true);
-    } else {
-      setScroll(false);
-    }
-  };
+  useEffect(() => {
+    const ChangeColorNav = () => {
+      if (window.scrollY >= 0.01) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
 
-  window.addEventListener("scroll", ChangeColorNav);
+    window.addEventListener("scroll", ChangeColorNav);
+  }, []);
 
   return (
     <div>
@@ -27,7 +29,6 @@ const navbar = () => {
           menuOpen ? "bg-gray-800 opacity-95 backdrop-blur-[10px]" : ""
         } `}
       >
-        {/** Fixed to come along */}
         <div class=" flex flex-wrap items-center justify-between mx-auto p-2">
           <a
             href="/"

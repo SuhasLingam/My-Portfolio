@@ -14,20 +14,29 @@ const intro = () => {
           <h1>Welcome to my Digital space!</h1>
           <p>
             I am fluent in languages like
-            <span className="text-blue-500">Python, C, C++, Javascript.</span> .
+            <span className="text-blue-500">
+              {" "}
+              Python, C, C++, Javascript.
+            </span>{" "}
+            .
           </p>
           <p>
             My field of interest's are building new
-            <span className="text-blue-500">Web Applications and Products</span>
+            <span className="text-blue-500">
+              Web Applications and Pentesting🕵
+            </span>
             and also in areas related to
-            <span className="text-blue-500">Blockchain and Cyber Security</span>
+            <span className="text-blue-500">
+              {" "}
+              Blockchain and Solving CTF's{" "}
+            </span>
             .
           </p>
           <p>
             In my spare time, I apply my passion for developing products with
-            <span className="text-blue-500"> React.js</span> and Other
+            <span className="text-blue-500"> React.js </span> and Other
             Technologies and Frameworks like
-            <span className="text-blue-500">Hardhat , Truffle</span>.
+            <span className="text-blue-500"> Hardhat </span>.
           </p>
         </div>
       </div>
