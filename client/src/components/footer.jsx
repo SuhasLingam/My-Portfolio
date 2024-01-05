@@ -12,12 +12,12 @@ const footer = () => {
   ];
 
   return (
-    <footer className="font-anton sticky z-10 flex flex-row justify-between p-4 text-sm text-white bg-gray-700">
-      <div>© 2024 Sl. All Rights Reserved</div>
-      <div className="md:ml-6">Made with 💜 by Suhas Srinivas Lingam</div>
+    <footer className="font-anton md:flex-row md:justify-between md:p-4 sticky z-10 flex flex-col items-center justify-center p-2 m-auto text-sm text-white bg-gray-700">
+      <div className="flex">© 2024 Sl. All Rights Reserved</div>
+      <div className="md:ml-6 flex">Made with 💜 by Suhas Srinivas Lingam</div>
 
       <div className="flex items-center mr-6">
-        <ul className="flex flex-row gap-4">
+        <ul className="md:gap-4 flex flex-row gap-2 mt-1">
           {IconsLinks.map((link) => (
             <li>
               <a href={link.link}>{link.name}</a>
