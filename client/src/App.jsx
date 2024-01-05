@@ -3,7 +3,7 @@ import Home1 from "./components/Home/home1";
 import Navbar from "./components/navbar";
 import ParticleBg from "./components/particle-bg";
 import React from "react";
-import Footer from "./components/footer";
+import Connect from "./components/connect";
 
 const App = () => {
   return (
@@ -14,7 +14,7 @@ const App = () => {
         <div>
           <Home1 />
           <Intro />
-          <Footer />
+          <Connect />
         </div>
       </div>
     </>
