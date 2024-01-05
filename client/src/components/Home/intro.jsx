@@ -23,6 +23,7 @@ const intro = () => {
           <p>
             My field of interest's are building new
             <span className="text-blue-500">
+              {" "}
               Web Applications and Pentesting🕵
             </span>
             and also in areas related to
