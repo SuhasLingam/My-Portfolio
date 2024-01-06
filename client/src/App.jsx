@@ -5,7 +5,7 @@ import AboutAll from "./components/About/About-All";
 const App = () => {
   return (
     <>
-      <HomePage />
+      <AboutAll />
     </>
   );
 };
