@@ -2220,6 +2220,11 @@ detective@^5.2.0:
     defined "^1.0.0"
     minimist "^1.2.6"
 
+devicons-react@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/devicons-react/-/devicons-react-1.2.6.tgz#99fb8aefca765cacf91e8e011f4cda75d9ca158c"
+  integrity sha512-C9mnEcT13HLiVOKk+xeO1jDJ5LPFv3xE13yvtrxaJ9zpNIa91xVUORkqK12GTyvSP8R4RhU0woBpFjRxNUVEKA==
+
 didyoumean@^1.2.2:
   version "1.2.2"
   resolved "https://registry.npmjs.org/didyoumean/-/didyoumean-1.2.2.tgz"
@@ -4206,6 +4211,7 @@ source-map@^0.6.1:
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
