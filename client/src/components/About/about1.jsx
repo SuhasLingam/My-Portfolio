@@ -6,7 +6,6 @@ const about1 = () => {
     { name: "Attending Conferences" },
     { name: "Organizing Events" },
     { name: "Participate In Hackathons and CTF's" },
-    { name: "Teaching CyberSecurity" },
   ];
 
   return (

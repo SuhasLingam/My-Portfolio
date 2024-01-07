@@ -24,6 +24,7 @@ import {
   UbuntuPlain,
 } from "devicons-react";
 import block from "../../assets/blockchain-icon.svg";
+import { SiVercel } from "react-icons/si";
 import sock from "../../assets/socket-io-icon.svg";
 
 const skills = () => {
@@ -80,7 +81,7 @@ const skills = () => {
       name: <GithubOriginal size={50} />,
     },
     {
-      name: <HerokuOriginalWordmark size={50} />,
+      name: <SiVercel className="text-black" size={50} />,
     },
     {
       name: <LinuxOriginal size={50} />,
@@ -110,7 +111,7 @@ const skills = () => {
 
       <div className="md:gap-9 md:h-fit md:grid-cols-6 md:grid-rows-4 grid grid-flow-row text-white">
         {SkillIcons.map((i) => (
-          <span className="md:w-[150px] hover:transition-all hover:ease-in-out hover:delay-75 ring-2 hover:shadow-2xl hover:shadow-blue-600 ring-white md:h-[90px] justify-center items-center flex md:p-4 md:text-3xl bg-blue-900 bg-opacity-[60%] ">
+          <span className="md:w-[150px] rounded-2xl hover:transition-all hover:ease-in-out hover:delay-75 ring-2 hover:shadow-custom hover:shadow-blue-600 ring-white md:h-[90px] justify-center items-center flex md:p-4 md:text-3xl bg-blue-900 bg-opacity-[60%] ">
             {i.name}
           </span>
         ))}

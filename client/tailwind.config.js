@@ -21,6 +21,9 @@ export default {
       animation: {
         "waving-hand": "wave 3s linear infinite",
       },
+      boxShadow: {
+        custom: "0px 0px 30px 10px rgba(0, 0, 0, 0.3)",
+      },
     },
   },
   plugins: [],
