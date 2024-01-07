@@ -3,6 +3,7 @@ import Navbar from "../navbar";
 import ParticleBg from "../particle-bg";
 import Footer from "../footer";
 import About1 from "./about1";
+import Skills from "./skills";
 
 const AboutAll = () => {
   return (
@@ -10,6 +11,7 @@ const AboutAll = () => {
       <ParticleBg />
       <Navbar />
       <About1 />
+      <Skills />
       <Footer />
     </div>
   );
