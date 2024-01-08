@@ -9,12 +9,9 @@ import Callender from "./callender";
 const AboutAll = () => {
   return (
     <div>
-      <ParticleBg />
-      <Navbar />
       <About1 />
       <Skills />
       <Callender />
-      <Footer />
     </div>
   );
 };

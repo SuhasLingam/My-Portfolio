@@ -9,16 +9,11 @@ import Footer from "../footer";
 const homePage = () => {
   return (
     <div>
-      <div>
-        <ParticleBg />
-        <Navbar />
-        <div>
-          <Home1 />
-          <Intro />
-          <Connect />
-          <Footer />
-        </div>
-      </div>
+      <ParticleBg />
+      <Navbar />
+      <Home1 />
+      <Intro />
+      <Connect />
     </div>
   );
 };

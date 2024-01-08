@@ -28,6 +28,81 @@ import { SiVercel } from "react-icons/si";
 import sock from "../../assets/socket-io-icon.svg";
 
 const skills = () => {
+  const SkillIcons = [
+    {
+      name: <CPlain size={50} />,
+    },
+    {
+      name: <CplusplusOriginal size={50} />,
+    },
+    {
+      name: <PythonOriginalWordmark size={50} />,
+    },
+    {
+      name: <Html5Original size={50} />,
+    },
+    {
+      name: <Css3Original size={50} />,
+    },
+    {
+      name: <TailwindcssPlain size={50} />,
+    },
+    {
+      name: <JavascriptOriginal size={50} />,
+    },
+    {
+      name: <ReactOriginal size={50} />,
+    },
+    {
+      name: <SolidityOriginal size={50} />,
+    },
+    {
+      name: <BashOriginal size={50} />,
+    },
+    {
+      name: <VscodeOriginal size={50} />,
+    },
+    {
+      name: <Windows8Original size={50} />,
+    },
+    {
+      name: <AnacondaOriginal size={50} />,
+    },
+    {
+      name: <img src={sock} className="size-[60px]" />,
+    },
+    {
+      name: <DockerOriginalWordmark size={50} />,
+    },
+    {
+      name: <GitOriginal size={50} />,
+    },
+    {
+      name: <GithubOriginal size={50} />,
+    },
+    {
+      name: <SiVercel className="text-black" size={50} />,
+    },
+    {
+      name: <LinuxOriginal size={50} />,
+    },
+    {
+      name: <DebianOriginal size={50} />,
+    },
+    {
+      name: <MysqlOriginalWordmark size={50} />,
+    },
+    {
+      name: <SshOriginalWordmark size={50} />,
+    },
+    {
+      name: <UbuntuPlain size={50} />,
+    },
+    {
+      name: <img src={block} className="size-[70px]" />,
+    },
+  ];
+
   return (
     <div className="md:flex-col md:items-center md:justify-center md:w-full md:h-screen sticky flex flex-col items-center justify-center">
       <h1 className="md:mb-[60px] md:text-6xl my-11 text-4xl font-anton text-white">
@@ -46,78 +121,3 @@ const skills = () => {
 };
 
 export default skills;
-
-const SkillIcons = [
-  {
-    name: <CPlain size={50} />,
-  },
-  {
-    name: <CplusplusOriginal size={50} />,
-  },
-  {
-    name: <PythonOriginalWordmark size={50} />,
-  },
-  {
-    name: <Html5Original size={50} />,
-  },
-  {
-    name: <Css3Original size={50} />,
-  },
-  {
-    name: <TailwindcssPlain size={50} />,
-  },
-  {
-    name: <JavascriptOriginal size={50} />,
-  },
-  {
-    name: <ReactOriginal size={50} />,
-  },
-  {
-    name: <SolidityOriginal size={50} />,
-  },
-  {
-    name: <BashOriginal size={50} />,
-  },
-  {
-    name: <VscodeOriginal size={50} />,
-  },
-  {
-    name: <Windows8Original size={50} />,
-  },
-  {
-    name: <AnacondaOriginal size={50} />,
-  },
-  {
-    name: <img src={sock} className="size-[60px]" />,
-  },
-  {
-    name: <DockerOriginalWordmark size={50} />,
-  },
-  {
-    name: <GitOriginal size={50} />,
-  },
-  {
-    name: <GithubOriginal size={50} />,
-  },
-  {
-    name: <SiVercel className="text-black" size={50} />,
-  },
-  {
-    name: <LinuxOriginal size={50} />,
-  },
-  {
-    name: <DebianOriginal size={50} />,
-  },
-  {
-    name: <MysqlOriginalWordmark size={50} />,
-  },
-  {
-    name: <SshOriginalWordmark size={50} />,
-  },
-  {
-    name: <UbuntuPlain size={50} />,
-  },
-  {
-    name: <img src={block} className="size-[70px]" />,
-  },
-];
