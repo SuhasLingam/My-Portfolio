@@ -20,7 +20,7 @@ const Calendar = () => {
     dark: ["#383838", "#5582FB", "#104EF2", "#0C40CB", "#0B35A5"],
   };
 
-  const blockSize = isMobile ? 3 : 14;
+  const blockSize = isMobile ? 4 : 14;
   const TextSize = isMobile ? 14 : 20;
 
   return (
