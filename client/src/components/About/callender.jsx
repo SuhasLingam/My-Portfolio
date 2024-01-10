@@ -36,7 +36,7 @@ const Calendar = () => {
           username="SuhasLingam"
           colorScheme="dark"
           theme={explicitTheme}
-          blockSize={isMobile ? 4 : 12}
+          blockSize={isMobile ? 3 : 12}
           fontSize={isMobile ? 10 : 14}
         />
       </div>

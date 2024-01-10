@@ -50,7 +50,7 @@ const project1 = () => {
       link: "",
       pic: bugImage,
       git: "https://github.com/SuhasLingam/BugBounty-Automation-Tool",
-      text: "Created a customized Bug Bounty Recon automation tool using Bash, incorporating tools like assetfinder, amass, httprobe, subjack, nmap, Wayback, and eyewitness. The script streamlines the reconnaissance process, enhancing efficiency in identifying assets, subdomains, and potential security vulnerabilities. Ensure all specified tools are installed for seamless execution.",
+      text: "Built a Bash-based Bug Bounty Recon tool using assetfinder, amass, httprobe, subjack, nmap, Wayback, and eyewitness. Streamlines asset and subdomain identification for efficient bug bounty hunting. Ensure necessary tools are installed for optimal performance.",
     },
     {
       name: "Coming Soon",
