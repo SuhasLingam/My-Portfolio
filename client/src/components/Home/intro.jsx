@@ -10,7 +10,7 @@ const intro = () => {
           </h1>
         </div>
 
-        <div className="md:ml-10 md:flex-wrap md:w-fit md:h-full md:text-2xl justify-center w-full p-[18%] md:p-0 space-y-6 text-lg">
+        <div className="md:ml-10 md:flex-wrap md:w-fit md:h-full md:text-2xl justify-center w-full p-[13%] md:p-0 space-y-6 text-lg">
           <h1>Welcome to my Digital space!</h1>
           <p>
             I am fluent in languages like

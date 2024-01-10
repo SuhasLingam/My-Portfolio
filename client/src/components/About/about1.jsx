@@ -10,7 +10,7 @@ const about1 = () => {
 
   return (
     <div>
-      <div className="font-anton md:w-full w-fit md:h-screen md:flex-row sticky flex flex-col h-screen p-4 text-justify text-white">
+      <div className="font-anton md:w-full w-fit md:h-screen md:flex-row sticky flex flex-col h-screen p-6 text-justify text-white">
         {/**Whoami */}
         <div className="md:w-full md:h-full md:bg-transparent md:justify-center md:items-center md:flex-col flex flex-col items-center justify-center">
           <h1 className="md:text-6xl md:justify-center md:items-center md:flex items-center justify-center text-4xl">
