@@ -49,9 +49,9 @@ const project1 = () => {
       </div>
 
       <div className="flex items-center justify-center">
-        <div className="md:gap-11 w-max md:grid-cols-4 grid grid-cols-2 gap-6">
+        <div className="md:gap-11 w-max md:grid-cols-4 gap-[50px] grid grid-cols-2 m-auto">
           {ProList.map((items) => (
-            <span className="md:w-[340px] w-[215px] rounded-2xl backdrop-blur-[10px] hover:transition-all ring-4 ring-blue-500 hover:delay-75 hover:ease-in-out hover:shadow-blue-500 hover:shadow-custom md:flex-col  md:h-[450px] h-[320px] flex relative justify-center items-center">
+            <span className="md:w-[340px] w-[200px] rounded-2xl backdrop-blur-[10px] hover:transition-all ring-4 ring-blue-500 hover:delay-75 hover:ease-in-out hover:shadow-blue-500 hover:shadow-custom md:flex-col  md:h-[450px] h-[310px] flex relative justify-center items-center">
               <a href={items.link}>{items.name}</a>
             </span>
           ))}

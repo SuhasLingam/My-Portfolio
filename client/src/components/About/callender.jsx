@@ -20,9 +20,6 @@ const Calendar = () => {
     dark: ["#383838", "#5582FB", "#104EF2", "#0C40CB", "#0B35A5"],
   };
 
-  const blockSize = isMobile ? 5 : 10;
-  const TextSize = isMobile ? 10 : 14;
-
   return (
     <div
       className={`sticky md:gap-11 my-11 flex flex-col ${
@@ -39,8 +36,8 @@ const Calendar = () => {
           username="SuhasLingam"
           colorScheme="dark"
           theme={explicitTheme}
-          blockSize={isMobile ? 5 : 12}
-          fontSize={TextSize}
+          blockSize={isMobile ? 4 : 12}
+          fontSize={isMobile ? 10 : 14}
         />
       </div>
     </div>
