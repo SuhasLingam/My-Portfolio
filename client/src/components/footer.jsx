@@ -4,11 +4,20 @@ import { BsTwitterX } from "react-icons/bs";
 
 const footer = () => {
   const IconsLinks = [
-    { name: <FaGithub size={15} />, link: "/" },
-    { name: <FaLinkedin size={15} />, link: "/" },
-    { name: <BsTwitterX size={15} />, link: "/" },
-    { name: <FaMedium size={15} />, link: "/" },
-    { name: <FaInstagram size={15} />, link: "/" },
+    { name: <FaGithub size={15} />, link: "https://github.com/SuhasLingam" },
+    {
+      name: <FaLinkedin size={15} />,
+      link: "https://www.linkedin.com/in/suhas-srinivas-lingam-655182221/",
+    },
+    {
+      name: <BsTwitterX size={15} />,
+      link: "https://twitter.com/suhaslingam400",
+    },
+    { name: <FaMedium size={15} />, link: "https://medium.com/@suhaslingam" },
+    {
+      name: <FaInstagram size={15} />,
+      link: "https://www.instagram.com/suhas_lingam/",
+    },
   ];
 
   return (

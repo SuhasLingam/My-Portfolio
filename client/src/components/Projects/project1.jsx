@@ -69,7 +69,7 @@ const project1 = () => {
   ];
 
   return (
-    <div className="font-anton md:my-11 my-11 md:flex-col md:w-full md:h-full sticky flex flex-col w-full h-full text-white">
+    <div className="font-anton md:my-11 my-11 md:flex-col md:w-full md:h-full md:pt-[80px] sticky flex flex-col w-full h-full text-white">
       <div className="flex flex-col items-center justify-center">
         <h1 className="md:text-6xl md:mb-4 text-pretty flex items-center justify-center text-3xl">
           My Recent <b className="mx-3 text-blue-500"> Works</b>

@@ -4,11 +4,20 @@ import { BsTwitterX } from "react-icons/bs";
 
 const connect = () => {
   const IconsLinks = [
-    { name: <FaGithub size={25} />, link: "/" },
-    { name: <FaLinkedin size={25} />, link: "/" },
-    { name: <BsTwitterX size={25} />, link: "/" },
-    { name: <FaMedium size={25} />, link: "/" },
-    { name: <FaInstagram size={25} />, link: "/" },
+    { name: <FaGithub size={25} />, link: "https://github.com/SuhasLingam" },
+    {
+      name: <FaLinkedin size={25} />,
+      link: "https://www.linkedin.com/in/suhas-srinivas-lingam-655182221/",
+    },
+    {
+      name: <BsTwitterX size={25} />,
+      link: "https://twitter.com/suhaslingam400",
+    },
+    { name: <FaMedium size={25} />, link: "https://medium.com/@suhaslingam" },
+    {
+      name: <FaInstagram size={25} />,
+      link: "https://www.instagram.com/suhas_lingam/",
+    },
   ];
 
   return (
@@ -28,7 +37,7 @@ const connect = () => {
         <ul className="md:gap-9 flex flex-row gap-4">
           {IconsLinks.map((link) => (
             <li
-              className={`md:hover:ring-blue-500 md:hover:ring-4 md:hover:transition-all md:hover:delay-70 md:hover:ease-in-out md:p-2 hover:ring-blue-500 hover:ring-4 hover:transition-all hover:delay-70 hover:ease-in-out p-2
+              className={`md:hover:ring-blue-500  md:hover:ring-4 md:hover:transition-all md:hover:delay-70 md:hover:ease-in-out md:p-2 hover:ring-blue-500 hover:ring-4 hover:transition-all hover:delay-70 hover:ease-in-out p-2
               rounded-full `}
             >
               <a className="text-blue-500" href={link.link}>
