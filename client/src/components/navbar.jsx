@@ -8,7 +8,7 @@ const navbar = () => {
 
   useEffect(() => {
     const ChangeColorNav = () => {
-      if (window.scrollY >= 0.1) {
+      if (window.scrollY >= 20) {
         setScroll(true);
       } else {
         setScroll(false);
@@ -21,12 +21,12 @@ const navbar = () => {
   return (
     <div>
       <nav
-        class={`p-1 ${
+        class={`p-2 ${
           scroll
             ? "md:transition-all md:ease-in-out md:bg-slate-600 md:bg-opacity-[80%] md:backdrop-blur-md md:fixed md:scroll-smooth"
             : ""
-        }   md:w-full z-50 top-0 sticky start-0 md:flex-row  ${
-          menuOpen ? "bg-gray-800 opacity-95 backdrop-blur-[10px]" : ""
+        }   md:w-full md:fixed sticky z-50 top-0 start-0 md:flex-row  ${
+          menuOpen ? "bg-gray-800 opacity-95 w-full backdrop-blur-[10px]" : ""
         } `}
       >
         <div class=" flex flex-wrap items-center justify-between mx-auto p-2">
