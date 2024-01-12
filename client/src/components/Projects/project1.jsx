@@ -7,9 +7,17 @@ import calImage from "../../assets/cal.png";
 import BuyImage from "../../assets/bmc.png";
 import comingImage from "../../assets/coming.jpg";
 import bugImage from "../../assets/bug.jpg";
+import YanamImage from "../../assets/Yanam.png";
 
 const project1 = () => {
   const ProList = [
+    {
+      name: "Agile Yanam",
+      link: "#",
+      pic: YanamImage,
+      git: "https://github.com/SuhasLingam/Agile-YANAM-Web",
+      text: "The Agile Yanam is a SaaS platform made up of React js and Tailwind Css",
+    },
     {
       name: "Buy Me A Coffee Dapp",
       link: "https://buy-me-a-coffee-blockchain.vercel.app/",
@@ -51,13 +59,6 @@ const project1 = () => {
       pic: bugImage,
       git: "https://github.com/SuhasLingam/BugBounty-Automation-Tool",
       text: "Built a Bash-based Bug Bounty Recon tool using assetfinder, amass, httprobe, subjack, nmap, Wayback, and eyewitness. Streamlines asset and subdomain identification for efficient bug bounty hunting. Ensure necessary tools are installed for optimal performance.",
-    },
-    {
-      name: "Coming Soon",
-      link: "",
-      pic: comingImage,
-      git: "",
-      text: "Coming Soon",
     },
     {
       name: "Coming Soon",
