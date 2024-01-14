@@ -13,7 +13,7 @@ const project1 = () => {
   const ProList = [
     {
       name: "Agile Yanam",
-      link: "#",
+      link: "https://agile-yanam-web.vercel.app/",
       pic: YanamImage,
       git: "https://github.com/SuhasLingam/Agile-YANAM-Web",
       text: "The Agile Yanam is a SaaS platform made up of React js and Tailwind Css",
@@ -48,7 +48,7 @@ const project1 = () => {
     },
     {
       name: "Calculator",
-      link: "https://receipe-app-iota.vercel.app/",
+      link: "https://calculator-react-app-seven.vercel.app/",
       pic: calImage,
       git: "https://github.com/SuhasLingam/Calculator",
       text: "The React and Tailwind CSS Calculator offers a user-friendly design with advanced functionality. Built using React.js and Tailwind CSS, it ensures a responsive and visually appealing experience for performing various calculations.",
