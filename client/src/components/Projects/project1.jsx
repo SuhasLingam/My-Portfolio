@@ -8,9 +8,17 @@ import BuyImage from "../../assets/bmc.png";
 import comingImage from "../../assets/coming.jpg";
 import bugImage from "../../assets/bug.jpg";
 import YanamImage from "../../assets/Yanam.png";
+import Hackverse from "../../assets/hackverse.png";
 
 const project1 = () => {
   const ProList = [
+    {
+      name: "Hackverse 2024 Website",
+      link: "https://hackverse-2024.vercel.app/",
+      pic: Hackverse,
+      git: "https://github.com/priyanshudash589/Hackverse-2024",
+      text: "The Hackverse 2024 website is a Next.js and Tailwind CSS project that provides information about the event, including schedules, speakers, and registration details. It offers a visually appealing interface for users to explore and engage with the event.",
+    },
     {
       name: "Agile Yanam",
       link: "https://agile-yanam-web.vercel.app/",
@@ -59,13 +67,6 @@ const project1 = () => {
       pic: bugImage,
       git: "https://github.com/SuhasLingam/BugBounty-Automation-Tool",
       text: "Built a Bash-based Bug Bounty Recon tool using assetfinder, amass, httprobe, subjack, nmap, Wayback, and eyewitness. Streamlines asset and subdomain identification for efficient bug bounty hunting. Ensure necessary tools are installed for optimal performance.",
-    },
-    {
-      name: "Coming Soon",
-      link: "",
-      pic: comingImage,
-      git: "",
-      text: "Coming Soon",
     },
   ];
 
