@@ -9,9 +9,17 @@ import comingImage from "../../assets/coming.jpg";
 import bugImage from "../../assets/bug.jpg";
 import YanamImage from "../../assets/Yanam.png";
 import Hackverse from "../../assets/hackverse.png";
+import tokenCraft from "../../assets/tokencraft.png";
 
 const project1 = () => {
   const ProList = [
+    {
+      name: "TokenCraft Website",
+      link: "https://tokencraft.vercel.app/",
+      pic: tokenCraft,
+      git: "https://github.com/SuhasLingam/dotETH-DimoAp",
+      text: "Creators tokenize designs for fair compensation through dynamic pricing tied to token value. Blockchain ensures secure storage, reducing piracy and protecting creator income, empowering designers to focus on their craft and earn deserved recognition and compensation.",
+    },
     {
       name: "Hackverse 2024 Website",
       link: "https://hackverse-2024.vercel.app/",
