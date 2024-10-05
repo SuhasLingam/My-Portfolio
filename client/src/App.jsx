@@ -21,6 +21,8 @@ const App = () => {
 
             <Route path="/project" element={<ProjectsAll />} />
           </Routes>
+
+
         </BrowserRouter>
 
         <Footer />
