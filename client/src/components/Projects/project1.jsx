@@ -1,124 +1,115 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaGithub } from "react-icons/fa";
-import recipeImage from "../../assets/recipe.png";
-import weatherImage from "../../assets/weather.png";
-import quoteImage from "../../assets/quote.png";
-import calImage from "../../assets/cal.png";
-import BuyImage from "../../assets/bmc.png";
-import comingImage from "../../assets/coming.jpg";
-import bugImage from "../../assets/bug.jpg";
-import YanamImage from "../../assets/Yanam.png";
-import Hackverse from "../../assets/hackverse.png";
-import tokenCraft from "../../assets/tokencraft.png";
+import { BiLinkExternal } from "react-icons/bi";
+import { motion } from "framer-motion";
+import { projectList } from "./projectData";
 
 const project1 = () => {
-  const ProList = [
-    {
-      name: "TokenCraft Website",
-      link: "https://tokencraft.vercel.app/",
-      pic: tokenCraft,
-      git: "https://github.com/SuhasLingam/dotETH-DimoAp",
-      text: "Creators tokenize designs for fair compensation through dynamic pricing tied to token value. Blockchain ensures secure storage, reducing piracy and protecting creator income, empowering designers to focus on their craft and earn deserved recognition and compensation.",
-    },
-    {
-      name: "Hackverse 2024 Website",
-      link: "https://hackverse-2024.vercel.app/",
-      pic: Hackverse,
-      git: "https://github.com/priyanshudash589/Hackverse-2024",
-      text: "The Hackverse 2024 website is a Next.js and Tailwind CSS project that provides information about the event, including schedules, speakers, and registration details. It offers a visually appealing interface for users to explore and engage with the event.",
-    },
-    {
-      name: "Agile Yanam",
-      link: "https://agile-yanam-web.vercel.app/",
-      pic: YanamImage,
-      git: "https://github.com/SuhasLingam/Agile-YANAM-Web",
-      text: "The Agile Yanam is a SaaS platform made up of React js and Tailwind Css",
-    },
-    {
-      name: "Buy Me A Coffee Dapp",
-      link: "https://buy-me-a-coffee-blockchain.vercel.app/",
-      pic: BuyImage,
-      git: "https://github.com/SuhasLingam/BuyMeACoffee-Blockchain",
-      text: "This is a React.js and Tailwind CSS project with Hardhat for decentralized finance. It utilizes smart contracts, likely on Ethereum, ensuring secure transactions and a user-friendly experience. ",
-    },
-    {
-      name: "Get Recipe App",
-      link: "https://receipe-app-iota.vercel.app/",
-      pic: recipeImage,
-      git: "https://github.com/SuhasLingam/receipe-app",
-      text: "The Recipe App is a React.js and Tailwind CSS project with API integration, providing users with a seamless experience to explore and discover recipes. The application offers a visually appealing interface, making it easy for users to find and try out new recipes.",
-    },
-    {
-      name: "Weather App",
-      link: "https://weather-app-rose-omega.vercel.app/",
-      pic: weatherImage,
-      git: "https://github.com/SuhasLingam/weather-app",
-      text: "The Weather App, built with React js and Tailwind CSS, seamlessly integrates weather data through APIs, providing users with a sleek and responsive platform for real-time weather updates and forecasts.",
-    },
-    {
-      name: "Random Quote Generator",
-      link: "https://random-quotes-orpin-one.vercel.app/",
-      pic: quoteImage,
-      git: "https://github.com/SuhasLingam/Random-Quotes-Generator",
-      text: "The Random Quote Generator, built with React.js and Tailwind CSS, provides a sleek interface for exploring curated quotes. It seamlessly integrates external APIs for a dynamic user experience.",
-    },
-    {
-      name: "Calculator",
-      link: "https://calculator-react-app-seven.vercel.app/",
-      pic: calImage,
-      git: "https://github.com/SuhasLingam/Calculator",
-      text: "The React and Tailwind CSS Calculator offers a user-friendly design with advanced functionality. Built using React.js and Tailwind CSS, it ensures a responsive and visually appealing experience for performing various calculations.",
-    },
-    {
-      name: "Bug Bounty Automation Tool",
-      link: "",
-      pic: bugImage,
-      git: "https://github.com/SuhasLingam/BugBounty-Automation-Tool",
-      text: "Built a Bash-based Bug Bounty Recon tool using assetfinder, amass, httprobe, subjack, nmap, Wayback, and eyewitness. Streamlines asset and subdomain identification for efficient bug bounty hunting. Ensure necessary tools are installed for optimal performance.",
-    },
-  ];
-
   return (
-    <div className="font-anton md:my-11 my-11 md:flex-col md:w-full md:h-full md:pt-[80px] sticky flex flex-col w-full h-full text-white">
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="md:text-6xl md:mb-4 text-pretty flex items-center justify-center text-3xl">
-          My Recent <b className="mx-3 text-blue-500"> Works</b>
-        </h1>
-        <h1 className="mb-9 md:text-xl font-thin">
-          Here are few Projects i've Worked on Recently
-        </h1>
+    <div className="relative min-h-screen px-4 py-20">
+      {/* Header Section */}
+      <div className="sm:mb-16 container relative z-50 px-4 mx-auto mb-8">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col items-center justify-center"
+        >
+          <h1 className="sm:text-5xl md:text-6xl bg-clip-text bg-gradient-to-r from-white to-blue-500 mb-4 text-4xl font-bold text-center text-transparent">
+            My Recent <span className="text-blue-500">Works</span>
+          </h1>
+          <p className="sm:text-lg md:text-xl max-w-2xl px-4 text-base text-center text-gray-400">
+            Here are a few projects I've worked on recently
+          </p>
+        </motion.div>
       </div>
 
-      <div className="flex items-center justify-center">
-        <div className="md:gap-11 w-max md:grid-cols-4 gap-11 grid grid-cols-1">
-          {ProList.map((items) => (
-            <span className="md:w-[340px] w-[300px] rounded-2xl backdrop-blur-[10px] hover:transition-all ring-4 ring-opacity-50 ring-blue-500 hover:delay-75 hover:ease-in-out hover:shadow-blue-500 hover:shadow-custom md:flex-col md:h-[450px] h-[400px] flex relative justify-center items-center">
-              <div className="rounded-t-2xl absolute w-full h-[70%] top-0">
-                <img
-                  src={items.pic}
-                  className="w-full rounded-t-2xl h-[100%]"
-                />
-                <div className="absolute w-full opacity-0 hover:opacity-100 top-0 rounded-t-2xl h-[100%] hover:transition-all hover:ease-in-out hover:bg-blue-400">
-                  <p className="text-wrap p-2 text-lg font-bold text-justify">
-                    {items.text}
-                  </p>
+      {/* Projects Grid */}
+      <div className="container relative z-40 px-4 mx-auto">
+        <div className="sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 lg:gap-8 grid grid-cols-1 gap-4">
+          {projectList.map((project, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group relative"
+            >
+              {/* Card */}
+              <div className="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-purple-900/40 to-blue-900/40 backdrop-blur-xl border-white/10 relative overflow-hidden border h-[400px] sm:h-[450px] lg:h-[500px]">
+                {/* Image Container */}
+                <div className="h-[45%] sm:h-[50%] overflow-hidden">
+                  <img
+                    src={project.pic}
+                    alt={project.name}
+                    className="group-hover:scale-110 object-cover object-center w-full h-full transition-transform duration-500 transform"
+                  />
+                  <div className="bg-gradient-to-t from-black/80 to-transparent absolute inset-0" />
+                </div>
+
+                {/* Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 h-[55%] sm:h-[50%] flex flex-col justify-between bg-gradient-to-t from-[#0a0a0a] to-transparent">
+                  <div>
+                    {/* Project Title */}
+                    <h3 className="group-hover:text-purple-400 sm:mb-3 sm:text-2xl mb-2 text-xl font-bold text-white transition-colors">
+                      {project.name}
+                    </h3>
+
+                    {/* Description */}
+                    <div className="h-auto max-h-[120px] sm:max-h-[150px] overflow-y-auto custom-scrollbar">
+                      <p className="sm:text-sm text-xs leading-relaxed text-gray-300">
+                        {project.text}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="sm:gap-4 sm:mt-4 flex gap-3 mt-3">
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:bg-blue-600 sm:px-4 sm:text-sm flex items-center flex-1 gap-2 px-3 py-2 text-xs text-white transition-colors bg-blue-500 rounded-lg"
+                      >
+                        <BiLinkExternal className="sm:text-lg text-base" />
+                        <span>Demo</span>
+                      </a>
+                    )}
+                    <a
+                      href={project.git}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:bg-gray-700 sm:px-4 sm:text-sm flex items-center flex-1 gap-2 px-3 py-2 text-xs text-white transition-colors bg-gray-800 rounded-lg"
+                    >
+                      <FaGithub className="sm:text-lg text-base" />
+                      <span>Code</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div className="absolute w-full h-[30%] items-center justify-center  flex flex-col rounded-b-2xl bottom-0 bg-transparent">
-                <a className="p-3 border-2 rounded-lg" href={items.link}>
-                  {items.name}
-                </a>
-
-                <a className="md:p-3 pt-3" href={items.git}>
-                  <b className="rounded-xl flex items-center justify-center gap-2 p-2 border-2">
-                    <FaGithub /> Github
-                  </b>
-                </a>
-              </div>
-            </span>
+            </motion.div>
           ))}
         </div>
       </div>
+
+      {/* Custom Scrollbar Styles */}
+      <style jsx>{`
+        .custom-scrollbar::-webkit-scrollbar {
+          width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: #4f46e5;
+          border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #4338ca;
+        }
+      `}</style>
     </div>
   );
 };
