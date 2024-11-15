@@ -6,6 +6,7 @@ import ProjectsAll from "./components/Projects/ProjectsAll";
 import ParticleBg from "./components/particle-bg";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
+import Resume from "./components/Resume/Resume";
 
 const App = () => {
   return (
@@ -18,11 +19,9 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutAll />} />
-
+            <Route path="/resume" element={<Resume />} />
             <Route path="/project" element={<ProjectsAll />} />
           </Routes>
-
-
         </BrowserRouter>
 
         <Footer />

@@ -145,7 +145,7 @@ const navbar = () => {
                 </li>
                 <li className="flex flex-row items-center justify-center gap-1">
                   <a
-                    href="/"
+                    href="/resume"
                     class="group md:flex md:flex-row md:items-center md:gap-1 transition-all duration-300 ease-in-out flex flex-row gap-1 justify-center items-center py-2 px-3 rounded-lg md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-white"
                     aria-current="page"
                   >
