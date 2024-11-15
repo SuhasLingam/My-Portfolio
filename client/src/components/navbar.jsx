@@ -2,203 +2,239 @@ import React, { useEffect, useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 
-const navbar = () => {
+const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
-    const ChangeColorNav = () => {
-      if (window.scrollY >= 1) {
-        setScroll(true);
-      } else {
-        setScroll(false);
-      }
+    const handleScroll = () => {
+      setScroll(window.scrollY >= 1);
     };
 
-    window.addEventListener("scroll", ChangeColorNav);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div>
       <nav
-        class={`p-2 ${
-          scroll
-            ? "md:transition-all md:ease-in-out md:bg-slate-600 md:bg-opacity-[80%] md:backdrop-blur-md md:fixed md:scroll-smooth"
-            : ""
-        }   md:w-full md:fixed sticky z-50 top-0 start-0 md:flex-row  ${
-          menuOpen ? "bg-gray-800 opacity-95 w-full backdrop-blur-[10px]" : ""
-        } `}
-      >
-        <div class=" flex flex-wrap items-center justify-between mx-auto p-2">
-          <a
-            href="/"
-            class="flex md:ml-[80px] items-center space-x-3 rtl:space-x-reverse"
-          >
-            <span class="self-center font-extrabold text-6xl whitespace-nowrap text-blue-500">
-              Sl.
-            </span>
-          </a>
-
-          <button
-            onClick={() => {
-              setMenuOpen(!menuOpen);
-            }}
-          >
-            {menuOpen ? (
-              <IoClose className="md:hidden text-white" size={50} />
-            ) : (
-              <HiMenu className="md:hidden text-white" size={50} />
-            )}
-          </button>
-
-          {
-            <div
-              className={`${
-                menuOpen
-                  ? "  block top-0 start-0 justify-center w-full h-max rounded-2xl"
-                  : ""
-              } w-full md:w-auto md:flex-row md:bg-transparent md:items-center md:ml-4 md:mr-11 `}
-              id="navbar-sticky"
-            >
-              <ul
-                class={`md:flex md:justify-end md:gap-3 md:bg-transparent text-2xl p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ${
-                  menuOpen ? "block" : "hidden"
-                }`}
-              >
-                <li className=" flex flex-row items-center justify-center gap-1">
-                  <a
-                    href="/"
-                    class="group md:flex md:flex-row md:items-center md:gap-1 transition-all duration-300 ease-in-out flex flex-row gap-1 justify-center items-center py-2 px-3 rounded-lg md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-white"
-                    aria-current="page"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="w-6 h-6 text-white"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-                      />
-                    </svg>
-
-                    <span className="hover:text-3xl bg-left-bottom bg-gradient-to-r from-blue-500 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                      Home
-                    </span>
-                  </a>
-                </li>
-                <li className=" flex flex-row items-center justify-center gap-1">
-                  <a
-                    href="/about"
-                    class="group md:flex md:flex-row md:items-center md:gap-1 transition-all duration-300 ease-in-out flex flex-row gap-1 justify-center items-center py-2 px-3 rounded-lg md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-white"
-                    aria-current="page"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="w-6 h-6 text-white"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-                      />
-                    </svg>
-
-                    <span className="hover:text-3xl bg-left-bottom bg-gradient-to-r from-blue-500 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                      About
-                    </span>
-                  </a>
-                </li>
-                <li className="flex flex-row items-center justify-center gap-1">
-                  <a
-                    href="/Project"
-                    class="group md:flex md:flex-row md:items-center md:gap-1 transition-all duration-300 ease-in-out flex flex-row gap-1 justify-center items-center py-2 px-3 rounded-lg md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-white"
-                    aria-current="page"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-6 h-6 text-white"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605"
-                      />
-                    </svg>
-
-                    <span className="hover:text-3xl bg-left-bottom bg-gradient-to-r from-blue-500 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                      Projects
-                    </span>
-                  </a>
-                </li>
-                <li className="flex flex-row items-center justify-center gap-1">
-                  <a
-                    href="/resume"
-                    class="group md:flex md:flex-row md:items-center md:gap-1 transition-all duration-300 ease-in-out flex flex-row gap-1 justify-center items-center py-2 px-3 rounded-lg md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-white"
-                    aria-current="page"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-6 h-6 text-white"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
-                      />
-                    </svg>
-
-                    <span className="hover:text-3xl bg-left-bottom bg-gradient-to-r from-blue-500 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                      Resume
-                    </span>
-                  </a>
-                </li>
-                <li className="flex flex-row items-center justify-center gap-1">
-                  <a
-                    href="https://github.com/SuhasLingam/Portfolio-in-progress"
-                    class="group md:flex md:flex-row md:items-center md:gap-1 transition-all duration-300 ease-in-out flex flex-row gap-1 justify-center items-center py-2 px-3 rounded-lg md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-white"
-                    aria-current="page"
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6 text-white"
-                    >
-                      <path
-                        d="M7 5C7 3.89543 7.89543 3 9 3C10.1046 3 11 3.89543 11 5C11 5.74028 10.5978 6.38663 10 6.73244V14.0396H11.7915C12.8961 14.0396 13.7915 13.1441 13.7915 12.0396V10.7838C13.1823 10.4411 12.7708 9.78837 12.7708 9.03955C12.7708 7.93498 13.6662 7.03955 14.7708 7.03955C15.8753 7.03955 16.7708 7.93498 16.7708 9.03955C16.7708 9.77123 16.3778 10.4111 15.7915 10.7598V12.0396C15.7915 14.2487 14.0006 16.0396 11.7915 16.0396H10V17.2676C10.5978 17.6134 11 18.2597 11 19C11 20.1046 10.1046 21 9 21C7.89543 21 7 20.1046 7 19C7 18.2597 7.4022 17.6134 8 17.2676V6.73244C7.4022 6.38663 7 5.74028 7 5Z"
-                        fill="#ffffff"
-                      />
-                    </svg>
-
-                    <span className="hover:text-3xl bg-left-bottom bg-gradient-to-r from-blue-500 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                      Fork
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+        className={`fixed w-full z-50 transition-all duration-500 ease-in-out
+          ${
+            scroll
+              ? "bg-slate-900/95 backdrop-blur-md shadow-xl border-b border-blue-500/20"
+              : "bg-transparent"
           }
+          ${menuOpen ? "bg-slate-900/98 backdrop-blur-md" : ""}`}
+      >
+        <div className="max-w-7xl sm:px-8 lg:px-12 px-6 mx-auto">
+          <div className="flex items-center justify-between h-24">
+            {/* Logo */}
+            <a
+              href="/"
+              className="group flex items-center space-x-2 hover:-translate-y-0.5 transition-all duration-300"
+            >
+              <span className="text-5xl font-extrabold bg-gradient-to-r from-blue-500 to-blue-400 bg-clip-text text-transparent">
+                Sl.
+              </span>
+              <div className="hidden md:block h-8 w-0.5 bg-blue-500/30 rounded-full" />
+            </a>
+
+            {/* Desktop Navigation */}
+            <div className="md:flex items-center hidden space-x-12">
+              <NavLink href="/" icon="home">
+                Home
+              </NavLink>
+              <NavLink href="/about" icon="about">
+                About
+              </NavLink>
+              <NavLink href="/Project" icon="projects">
+                Projects
+              </NavLink>
+              <NavLink href="/resume" icon="resume">
+                Resume
+              </NavLink>
+              <NavLink
+                href="https://github.com/SuhasLingam/Portfolio-in-progress"
+                icon="fork"
+                external
+                className="ml-4 bg-blue-500/10 px-4 py-2 rounded-lg hover:bg-blue-500/20"
+              >
+                Fork
+              </NavLink>
+            </div>
+
+            {/* Mobile menu button */}
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="md:hidden hover:text-white hover:bg-blue-500/10 focus:outline-none p-3 text-gray-300 rounded-lg transition-all duration-300"
+            >
+              {menuOpen ? <IoClose size={28} /> : <HiMenu size={28} />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile menu */}
+        <div
+          className={`md:hidden transition-all duration-300 ease-in-out ${
+            menuOpen
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-4 pointer-events-none"
+          }`}
+        >
+          <div className="px-4 pt-3 pb-6 space-y-3 border-t border-blue-500/10">
+            <MobileNavLink href="/" icon="home">
+              Home
+            </MobileNavLink>
+            <MobileNavLink href="/about" icon="about">
+              About
+            </MobileNavLink>
+            <MobileNavLink href="/Project" icon="projects">
+              Projects
+            </MobileNavLink>
+            <MobileNavLink href="/resume" icon="resume">
+              Resume
+            </MobileNavLink>
+            <MobileNavLink
+              href="https://github.com/SuhasLingam/Portfolio-in-progress"
+              icon="fork"
+              external
+              className="bg-blue-500/10 rounded-lg hover:bg-blue-500/20"
+            >
+              Fork
+            </MobileNavLink>
+          </div>
         </div>
       </nav>
     </div>
   );
 };
 
-export default navbar;
+// Navigation link components
+const NavLink = ({ href, children, icon, external, className = "" }) => (
+  <a
+    href={href}
+    className={`group hover:text-white flex items-center space-x-3 text-gray-300 transition-all duration-300 hover:-translate-y-0.5 ${className}`}
+    {...(external && { target: "_blank", rel: "noopener noreferrer" })}
+  >
+    <span className="group-hover:text-blue-400 text-blue-500 transition-colors duration-300">
+      {getIcon(icon)}
+    </span>
+    <span className="relative text-lg font-medium tracking-wide">
+      {children}
+      <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out rounded-full" />
+    </span>
+  </a>
+);
+
+const MobileNavLink = ({ href, children, icon, external, className = "" }) => (
+  <a
+    href={href}
+    className={`hover:text-white hover:bg-blue-500/10 flex items-center px-4 py-3 space-x-3 text-lg font-medium text-gray-300 transition-all duration-300 rounded-lg ${className}`}
+    {...(external && { target: "_blank", rel: "noopener noreferrer" })}
+  >
+    <span className="text-blue-500 transition-colors duration-300">
+      {getIcon(icon)}
+    </span>
+    <span className="tracking-wide">{children}</span>
+  </a>
+);
+
+// Helper function to get icons - now with larger icons
+const getIcon = (name) => {
+  const iconProps = {
+    className: "w-6 h-6",
+    strokeWidth: 1.75,
+  };
+
+  switch (name) {
+    case "home":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          {...iconProps}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+          />
+        </svg>
+      );
+    case "about":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          {...iconProps}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+          />
+        </svg>
+      );
+    case "projects":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          {...iconProps}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"
+          />
+        </svg>
+      );
+    case "resume":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          {...iconProps}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+          />
+        </svg>
+      );
+    case "fork":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          {...iconProps}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M14 6c0 1.657-1.343 3-3 3S8 7.657 8 6s1.343-3 3-3 3 1.343 3 3ZM12 19c4.97 0 9-2.686 9-6s-4.03-6-9-6-9 2.686-9 6 4.03 6 9 6Z"
+          />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M9 12c0 1.657-1.343 3-3 3S3 13.657 3 12s1.343-3 3-3 3 1.343 3 3ZM21 12c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3Z"
+          />
+        </svg>
+      );
+    default:
+      return null;
+  }
+};
+
+export default Navbar;
