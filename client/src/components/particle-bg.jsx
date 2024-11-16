@@ -19,7 +19,7 @@ const particleBg = () => {
       autoPlay: true,
       background: {
         color: {
-          value: "#030312",
+          value: "#17163e",
         },
         image: "",
         position: "",
@@ -42,7 +42,7 @@ const particleBg = () => {
       delay: 0,
       fullScreen: {
         enable: true,
-        zIndex: 0,
+        zIndex: -1,
       },
       detectRetina: true,
       duration: 0,
@@ -61,8 +61,8 @@ const particleBg = () => {
             type: "circle",
           },
           onHover: {
-            enable: false,
-            mode: [],
+            enable: true,
+            mode: "light",
             parallax: {
               enable: false,
               force: 2,
@@ -95,6 +95,12 @@ const particleBg = () => {
             distance: 200,
             duration: 0.4,
             mix: false,
+            divs: {
+              distance: 200,
+              duration: 0.4,
+              mix: false,
+              selectors: [],
+            },
           },
           connect: {
             distance: 80,
@@ -126,6 +132,15 @@ const particleBg = () => {
             speed: 1,
             maxSpeed: 50,
             easing: "ease-out-quad",
+            divs: {
+              distance: 200,
+              duration: 0.4,
+              factor: 100,
+              speed: 1,
+              maxSpeed: 50,
+              easing: "ease-out-quad",
+              selectors: [],
+            },
           },
           slow: {
             factor: 3,
@@ -135,17 +150,17 @@ const particleBg = () => {
             area: {
               gradient: {
                 start: {
-                  value: "#ffffff",
+                  value: "3b5e98",
                 },
                 stop: {
-                  value: "#000000",
+                  value: "#17163e",
                 },
               },
               radius: 1000,
             },
             shadow: {
               color: {
-                value: "#000000",
+                value: "#17163e",
               },
               length: 2000,
             },
@@ -183,12 +198,12 @@ const particleBg = () => {
           },
         },
         color: {
-          value: "#fff",
+          value: "#ff0000",
           animation: {
             h: {
               count: 0,
-              enable: false,
-              speed: 1,
+              enable: true,
+              speed: 20,
               decay: 0,
               delay: 0,
               sync: true,
@@ -242,7 +257,7 @@ const particleBg = () => {
           },
           decay: 0,
           distance: {},
-          direction: "bottom",
+          direction: "none",
           drift: 0,
           enable: true,
           gravity: {
@@ -268,12 +283,12 @@ const particleBg = () => {
           },
           random: false,
           size: false,
-          speed: 2,
+          speed: 6,
           spin: {
             acceleration: 0,
             enable: false,
           },
-          straight: true,
+          straight: false,
           trail: {
             enable: false,
             length: 10,
@@ -292,7 +307,7 @@ const particleBg = () => {
             mode: "delete",
             value: 0,
           },
-          value: 400,
+          value: 30,
         },
         opacity: {
           value: 1,
@@ -324,10 +339,13 @@ const particleBg = () => {
           close: true,
           fill: true,
           options: {},
-          type: "circle",
+          type: ["circle", "square"],
         },
         size: {
-          value: 10,
+          value: {
+            min: 15,
+            max: 30,
+          },
           animation: {
             count: 0,
             enable: false,
@@ -344,13 +362,10 @@ const particleBg = () => {
           width: 0,
         },
         zIndex: {
-          value: {
-            min: 0,
-            max: 100,
-          },
-          opacityRate: 10,
-          sizeRate: 10,
-          velocityRate: 10,
+          value: 0,
+          opacityRate: 1,
+          sizeRate: 1,
+          velocityRate: 1,
         },
         destroy: {
           bounds: {},
@@ -407,10 +422,10 @@ const particleBg = () => {
           },
         },
         wobble: {
-          distance: 10,
-          enable: true,
+          distance: 5,
+          enable: false,
           speed: {
-            angle: 10,
+            angle: 50,
             move: 10,
           },
         },
@@ -428,8 +443,8 @@ const particleBg = () => {
         rotate: {
           value: 0,
           animation: {
-            enable: false,
-            speed: 0,
+            enable: true,
+            speed: 5,
             decay: 0,
             sync: false,
           },
@@ -492,7 +507,7 @@ const particleBg = () => {
       style: {},
       themes: [],
       zLayers: 100,
-      name: "Snow",
+      emitters: [],
       motion: {
         disable: false,
         reduce: {
