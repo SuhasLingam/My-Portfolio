@@ -17,6 +17,7 @@
     "@tsparticles/all": "^3.0.3",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.0.3",
+    "devicon": "^2.16.0",
     "devicons-react": "^1.2.6",
     "framer-motion": "^11.11.17",
     "pdfjs-dist": "3.4.120",

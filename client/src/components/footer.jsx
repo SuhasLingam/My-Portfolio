@@ -28,7 +28,7 @@ const footer = () => {
       <div className="flex items-center mr-6">
         <ul className="md:gap-4 flex flex-row gap-2 mt-1">
           {IconsLinks.map((link) => (
-            <li>
+            <li key={link.name + link.link}>
               <a href={link.link}>{link.name}</a>
             </li>
           ))}

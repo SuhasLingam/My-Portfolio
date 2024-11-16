@@ -19,7 +19,8 @@ const about1 = () => {
           <p className="text-wrap md:text-3xl md:p-8 md:text-justify ">
             This is <b className="p-2 text-blue-500">SUHAS SRINIVAS LINGAM</b> ,
             from Visakhapatnam, popularly known as “the city of destiny”, in
-            Andhra Pradesh. I’m a Third year student at SRM University, pursuing
+            Andhra Pradesh. I’m a Fourth year student at SRM University,
+            pursuing
             <b className="p-2 text-blue-500">computer science</b>
             engineering. <br /> <br /> Im the CyberSecurity
             <b className="p-2 text-blue-500">Head</b>of the Technical Club
@@ -32,7 +33,10 @@ const about1 = () => {
           </p>
           <div className="flex md:flex-col flex-col mt-[50px]  md:mt-4 md:text-2xl text-base text-[#4e7ada]">
             {extras.map((n) => (
-              <p className="md:flex-row md:gap-3 flex items-center">
+              <p
+                key={n.name}
+                className="md:flex-row md:gap-3 flex items-center"
+              >
                 <FaArrowCircleRight /> {n.name}{" "}
               </p>
             ))}
