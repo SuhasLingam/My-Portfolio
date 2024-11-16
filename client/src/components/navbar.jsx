@@ -8,39 +8,50 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScroll(window.scrollY >= 1);
+      setScroll(window.scrollY >= 30);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (menuOpen && !e.target.closest("nav")) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, [menuOpen]);
+
   return (
     <div>
       <nav
-        className={`fixed w-full z-50 transition-all duration-500 ease-in-out
+        className={`fixed w-full z-50 transition-all duration-300 ease-in-out
           ${
             scroll
-              ? "bg-slate-900/95 backdrop-blur-md shadow-xl border-b border-blue-500/20"
+              ? "bg-slate-900/90 backdrop-blur-md shadow-lg border-b border-blue-500/10"
               : "bg-transparent"
           }
-          ${menuOpen ? "bg-slate-900/98 backdrop-blur-md" : ""}`}
+          ${menuOpen ? "bg-slate-900 shadow-lg" : ""}`}
       >
-        <div className="max-w-7xl sm:px-8 lg:px-12 px-6 mx-auto">
-          <div className="flex items-center justify-between h-24">
+        <div className="max-w-7xl sm:px-6 lg:px-8 px-4 mx-auto">
+          <div className="md:h-20 flex items-center justify-between h-16">
             {/* Logo */}
             <a
               href="/"
               className="group flex items-center space-x-2 hover:-translate-y-0.5 transition-all duration-300"
             >
-              <span className="text-5xl font-extrabold bg-gradient-to-r from-blue-500 to-blue-400 bg-clip-text text-transparent">
+              <span className="md:text-5xl bg-gradient-to-r from-blue-500 to-blue-400 bg-clip-text text-4xl font-extrabold text-transparent">
                 Sl.
               </span>
               <div className="hidden md:block h-8 w-0.5 bg-blue-500/30 rounded-full" />
             </a>
 
             {/* Desktop Navigation */}
-            <div className="md:flex items-center hidden space-x-12">
+            <div className="md:flex items-center hidden space-x-8">
               <NavLink href="/" icon="home">
                 Home
               </NavLink>
@@ -57,7 +68,7 @@ const Navbar = () => {
                 href="https://github.com/SuhasLingam/Portfolio-in-progress"
                 icon="fork"
                 external
-                className="ml-4 bg-blue-500/10 px-4 py-2 rounded-lg hover:bg-blue-500/20"
+                className="bg-blue-500/10 hover:bg-blue-500/20 px-4 py-2 ml-4 rounded-lg"
               >
                 Fork
               </NavLink>
@@ -65,40 +76,61 @@ const Navbar = () => {
 
             {/* Mobile menu button */}
             <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="md:hidden hover:text-white hover:bg-blue-500/10 focus:outline-none p-3 text-gray-300 rounded-lg transition-all duration-300"
+              onClick={(e) => {
+                e.stopPropagation();
+                setMenuOpen(!menuOpen);
+              }}
+              className="md:hidden hover:text-white hover:bg-blue-500/10 focus:outline-none p-2 text-gray-300 transition-all duration-300 rounded-lg"
+              aria-label="Toggle menu"
             >
-              {menuOpen ? <IoClose size={28} /> : <HiMenu size={28} />}
+              {menuOpen ? <IoClose size={24} /> : <HiMenu size={24} />}
             </button>
           </div>
         </div>
 
         {/* Mobile menu */}
         <div
-          className={`md:hidden transition-all duration-300 ease-in-out ${
+          className={`md:hidden fixed left-0 right-0 transition-all duration-300 ease-in-out ${
             menuOpen
               ? "opacity-100 translate-y-0"
-              : "opacity-0 -translate-y-4 pointer-events-none"
+              : "opacity-0 -translate-y-full pointer-events-none"
           }`}
         >
-          <div className="px-4 pt-3 pb-6 space-y-3 border-t border-blue-500/10">
-            <MobileNavLink href="/" icon="home">
+          <div className="bg-slate-900/95 backdrop-blur-md border-blue-500/10 px-4 pt-2 pb-4 space-y-2 border-t shadow-xl">
+            <MobileNavLink
+              href="/"
+              icon="home"
+              onClick={() => setMenuOpen(false)}
+            >
               Home
             </MobileNavLink>
-            <MobileNavLink href="/about" icon="about">
+            <MobileNavLink
+              href="/about"
+              icon="about"
+              onClick={() => setMenuOpen(false)}
+            >
               About
             </MobileNavLink>
-            <MobileNavLink href="/Project" icon="projects">
+            <MobileNavLink
+              href="/Project"
+              icon="projects"
+              onClick={() => setMenuOpen(false)}
+            >
               Projects
             </MobileNavLink>
-            <MobileNavLink href="/resume" icon="resume">
+            <MobileNavLink
+              href="/resume"
+              icon="resume"
+              onClick={() => setMenuOpen(false)}
+            >
               Resume
             </MobileNavLink>
             <MobileNavLink
               href="https://github.com/SuhasLingam/Portfolio-in-progress"
               icon="fork"
               external
-              className="bg-blue-500/10 rounded-lg hover:bg-blue-500/20"
+              onClick={() => setMenuOpen(false)}
+              className="bg-blue-500/10 hover:bg-blue-500/20 rounded-lg"
             >
               Fork
             </MobileNavLink>
@@ -126,10 +158,18 @@ const NavLink = ({ href, children, icon, external, className = "" }) => (
   </a>
 );
 
-const MobileNavLink = ({ href, children, icon, external, className = "" }) => (
+const MobileNavLink = ({
+  href,
+  children,
+  icon,
+  external,
+  className = "",
+  onClick,
+}) => (
   <a
     href={href}
-    className={`hover:text-white hover:bg-blue-500/10 flex items-center px-4 py-3 space-x-3 text-lg font-medium text-gray-300 transition-all duration-300 rounded-lg ${className}`}
+    onClick={onClick}
+    className={`hover:text-white hover:bg-blue-500/10 flex items-center px-4 py-2.5 space-x-3 text-base font-medium text-gray-300 transition-all duration-300 rounded-lg ${className}`}
     {...(external && { target: "_blank", rel: "noopener noreferrer" })}
   >
     <span className="text-blue-500 transition-colors duration-300">
